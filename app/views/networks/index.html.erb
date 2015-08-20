@@ -1,0 +1,13 @@
+
+<%= link_to 'Add Network', new_user_network_path %>
+<% @networks.each do |network| %>
+  <p>
+    <tr>
+     <%= network.name %>
+     <%= network.username %>
+      <%= link_to 'Edit', {action: 'edit', id: network.id} %>
+
+    </tr>
+  </p>
+<% end %>
+
