@@ -6,6 +6,7 @@
      <%= network.name %>
      <%= network.username %>
       <%= link_to 'Edit', {action: 'edit', id: network.id} %>
+      <%= link_to 'Destroy', user_network_path(network.user_id, network.id), method: :delete %>
 
     </tr>
   </p>

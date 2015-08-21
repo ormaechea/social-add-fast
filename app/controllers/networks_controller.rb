@@ -1,6 +1,4 @@
 class NetworksController < ApplicationController
-
-
   def show
   end
 
@@ -35,10 +33,11 @@ class NetworksController < ApplicationController
       render 'edit'
     end
  end
+
   def destroy
-     @network = Network.find(params[:id])
-     @network.destroy
-     render 'index'
+    @network = Network.find(params[:id])
+    @network.destroy
+    redirect_to action:"index", user_id: params[:user_id]
   end
 
   private
