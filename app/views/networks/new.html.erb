@@ -1,0 +1,13 @@
+<%= form_for @network, url: user_networks_path(@user) do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+   <%= f.label :username %><br>
+   <%= f.text_field :username %>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
